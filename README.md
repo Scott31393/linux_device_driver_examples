@@ -1,4 +1,4 @@
-# Linux_device_driver_examples
+# Linux device driver examples
 Linux device examples
 
 1) alloc_major-number (Dynamic Allocation of Major Numbers)<br />
