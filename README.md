@@ -10,7 +10,7 @@ In this example we can see how to dynamically get major and minor number for a c
 # Build
 
 Open terminal (press `ctrl-t`):<br />
-`gitclone` the repository<br />
+`gitclone https://github.com/Scott31393/linux_device_driver_examples.git`<br />
 `cd /alloc_major-number` <br /> 
 `make` <br />
 
