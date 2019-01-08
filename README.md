@@ -1,14 +1,14 @@
 # Linux device driver examples
 
 
-# (Dynamic Allocation of Major Numbers)
+## (Dynamic Allocation of Major Numbers)
 alloc_major-number<br />
 
 In this example we can see how to dynamically get major and minor number for a character device driver.<br />
 
 [Linux device driver]: https://www.xml.com/ldd/chapter/book/ch03.html <br />
 
-# Build
+## Build
 
 Open terminal (press `ctrl-t`)<br />
 
