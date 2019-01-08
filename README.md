@@ -5,7 +5,7 @@ Linux device examples
 
 In this example we can see how to dynamically get major and minor number for a character device driver.<br />
 
-[link text itself]: https://www.xml.com/ldd/chapter/book/ch03.html <br />
+[ldd3]: https://www.xml.com/ldd/chapter/book/ch03.html <br />
 
 # Build
 
