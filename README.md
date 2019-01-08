@@ -7,20 +7,20 @@ In this example we can see how to dynamically get major and minor number for a c
 
 [link text itself]: https://www.xml.com/ldd/chapter/book/ch03.html <br />
 
-#Build<br />
+# Build<br />
 <br />
 <br />
-Open terminal (press 'ctrl-t'):<br />
-'gitclone' the repository<br />
-'cd /alloc_major-number'<br />
-'make'<br />
+Open terminal (press `ctrl-t`):<br />
+`gitclone` the repository<br />
+`cd /alloc_major-number`<br />
+`make`<br />
 
 Dynamically linking the module to the kernel<br />
-'sudo insmod main.ko'<br />
+`sudo insmod main.ko`<br />
 <br />
 Visualize messages contained by the kernel buffer on the stardard output of the OS :<br />
-'dmesg'<br />
+`dmesg`<br />
 <br />
 Remove kernel module<br />
-'sudo rmmod main.ko'<br />
+`sudo rmmod main.ko`<br />
 
