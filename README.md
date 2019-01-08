@@ -12,8 +12,8 @@ In this example we can see how to dynamically get major and minor number for a c
 <br />
 Open terminal (press `ctrl-t`):<br />
 `gitclone` the repository<br />
-`cd /alloc_major-number`<br />
-`make`<br />
+`cd /alloc_major-number` <br /> 
+`make` <br />
 
 Dynamically linking the module to the kernel<br />
 `sudo insmod main.ko`<br />
