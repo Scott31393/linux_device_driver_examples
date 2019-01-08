@@ -23,4 +23,3 @@ Visualize messages contained by the kernel buffer on the stardard output of the 
 <br />
 Remove kernel module<br />
 `sudo rmmod main.ko`<br />
-
