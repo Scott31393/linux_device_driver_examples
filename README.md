@@ -7,9 +7,8 @@ In this example we can see how to dynamically get major and minor number for a c
 
 [link text itself]: https://www.xml.com/ldd/chapter/book/ch03.html <br />
 
-# Build<br />
-<br />
-<br />
+# Build
+
 Open terminal (press `ctrl-t`):<br />
 `gitclone` the repository<br />
 `cd /alloc_major-number` <br /> 
