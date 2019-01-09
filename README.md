@@ -4,7 +4,7 @@
 ## Dynamic Allocation of Major Numbers
 alloc_major-number<br />
 
-In this example we can see how to dynamically get major and minor number for a character device driver.<br />
+In this example we can see how to dynamically get major and minor numbers for 4 character devices driver.<br />
 
 [Linux device driver]: https://www.xml.com/ldd/chapter/book/ch03.html <br />
 
