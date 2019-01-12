@@ -1,7 +1,7 @@
 # Linux device driver examples
 
 
-## Dynamic Allocation of Major Numbers
+## Dynamic Allocation of Major Numbers For a Character Device Driver
 alloc_major-number<br />
 
 In this example we can see how to dynamically get major and minor numbers for 4 character devices driver. <br />
@@ -28,3 +28,7 @@ Visualize messages contained by the kernel buffer on the stardard output of the 
 
 Remove kernel module:<br />
 `sudo rmmod main.ko`<br />
+
+
+## Create /proc Filesystem To Write and Read Data From/To Kernel Space
+
