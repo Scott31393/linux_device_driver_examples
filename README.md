@@ -30,5 +30,5 @@ Remove kernel module:<br />
 `sudo rmmod main.ko`<br />
 
 
-## Create /proc Filesystem To Write and Read Data From/To Kernel Space
+## Create /proc/my_proc Filesystem To Write and Read Data From/To Kernel Space
 
