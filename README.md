@@ -4,7 +4,7 @@
 ![alt text](https://lwn.net/Kernel/LDD3/cover.gif) <br /> <br />
 https://lwn.net/Kernel/LDD3/
 
-Reading the book Linux Device Driver ( Third Edition ) I will publish examples on the chapters that I am reading, to put into practice the concepts explained.
+Reading the book "Linux Device Driver [Third Edition]" I will publish examples on the chapters that I am reading, to put into practice the concepts explained.
 
 ## 1) Dynamic Allocation of Major Numbers
 
