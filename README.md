@@ -1,6 +1,8 @@
 # Linux device driver examples
 
 
+![alt text](https://lwn.net/Kernel/LDD3/cover.gif)
+
 ## 1) Dynamic Allocation of Major Numbers
 
 file --> alloc_major-number<br />
@@ -83,3 +85,4 @@ After that "hello" strings appear in the Terminal console. To remove the loadabl
 `sudo rmmod main.ko`
 
 "Cleanup module" log appear on the dmesg log.
+
