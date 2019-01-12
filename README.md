@@ -1,7 +1,7 @@
 # Linux device driver examples
 
 
-## Dynamic Allocation of Major Numbers
+## 1) Dynamic Allocation of Major Numbers
 
 file --> alloc_major-number<br />
 
@@ -30,7 +30,7 @@ Visualize messages contained by the kernel buffer on the stardard output of the 
 Remove kernel module:<br />
 `sudo rmmod main.ko`<br />
 
-## Create /proc/my_proc Filesystem To Write and Read Data To/From Kernel Space
+## 2) Create /proc/my_proc Filesystem To Write and Read Data To/From Kernel Space
 
 file --> proc_write_read <br />
 
