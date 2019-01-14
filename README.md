@@ -92,3 +92,10 @@ After that "hello" strings appear in the Terminal console. To remove the loadabl
 
 
 ## 3) Create a Simple Character Device Driver /dev/scottdevice 
+
+file --> simply_chdvdriver <br />
+
+
+In this example (play_with_simply_chdvdriver) we create a new character device driver, in the next example we how to write into the device and we see also how to read from this device<br />
+
+
