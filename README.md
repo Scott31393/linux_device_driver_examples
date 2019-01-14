@@ -8,7 +8,7 @@ Reading the book "Linux Device Driver [Third Edition]" I will publish examples o
 
 ## 1) Dynamic Allocation of Major Numbers
 
-file --> alloc_major-number<br />
+file --> 1_alloc_major_number<br />
 
 In this example we can see how to dynamically get major and minor numbers for 4 character devices driver. <br />
 (Like scull example)
@@ -21,7 +21,7 @@ Open Terminal (press `ctrl-t`)<br />
 
 Get the repository:
 `gitclone https://github.com/Scott31393/linux_device_driver_examples.git`<br />
-`cd /alloc_major-number` <br /> 
+`cd /1_alloc_major-number` <br /> 
 `make` <br />
 
 Dynamically linking the module to the kernel:<br />
@@ -37,7 +37,7 @@ Remove kernel module:<br />
 
 ## 2) Create /proc/my_proc Filesystem To Write and Read Data To/From Kernel Space
 
-file --> proc_write_read <br />
+file --> 2_proc_write_read <br />
 
 In this example we create the new proc filesystem /proc/my_proc to write and read data to/from kernel space. <br />
 
@@ -59,7 +59,7 @@ Open Terminal: <br /> (press `ctrl-t`)<br />
 
 Get the repository:<br />
 `gitclone https://github.com/Scott31393/linux_device_driver_examples.git`<br />
-`cd /alloc_major-number` <br /> 
+`cd /2_proc_write_read` <br /> 
 `make` <br />
 
 Dynamically linking the module to the kernel:<br />
@@ -91,11 +91,71 @@ After that "hello" strings appear in the Terminal console. To remove the loadabl
 
 
 
-## 3) Create a Simple Character Device Driver /dev/scottdevice 
+## 3) Create a Simple Character Device Driver [/dev/scottdevice]
 
-file --> simply_chdvdriver <br />
+file --> 3_simply_chdvdriver <br />
 
 
 In this example (play_with_simply_chdvdriver) we create a new character device driver, in the next example we how to write into the device and we see also how to read from this device<br />
 
 
+## Build
+
+Open Terminal: <br /> (press `ctrl-t`)<br />
+
+Get the repository:<br />
+`gitclone https://github.com/Scott31393/linux_device_driver_examples.git`<br />
+`cd /3_simply_chdvdriver` <br /> 
+`make` <br />
+
+Dynamically linking the module to the kernel:<br />
+`sudo insmod main.ko`<br />
+
+
+Visualize messages contained by the kernel buffer on the stardard output of the OS :<br />
+`dmesg`<br />
+
+We the Kern alert log: "DEVICE --> scottdevice,[ Major = 239 ], [ minor  = 0 ]".<br />
+
+We make the character device file readable, writable and executable by everyone using chmod 777: <br /> 
+
+`sudo chmod 777 /dev/scottdevice`
+
+In the next example (4) we see how to play with this character device.
+
+To remove the loadable kernel module (LKM) press:
+
+`sudo rmmod main.ko`
+
+"Unload module" log appear on the dmesg log.
+
+
+## 4) Create a User space App [play] That Can Write/Read From/To The Simple Character Device Driver [/dev/scottdevice]
+
+file--> 4_play_with_simply_chdvdriver
+
+In this example we create a simple user application that can write or read data to/from the device created in the previous example: "/dev/scottdevice".
+
+## Build
+
+
+Open Terminal: <br /> (press `ctrl-t`)<br />
+
+Get the repository:<br />
+`gitclone https://github.com/Scott31393/linux_device_driver_examples.git`<br />
+`cd /4_play_with_simply_chdvdriver` <br /> 
+`make` <br />
+
+Now just execute it using:<br />
+
+`./play` <br />
+
+Terminal ask you if you want write to the device, pressing:
+
+`w`
+
+ or you want read from the device, pressing:
+
+ `r`
+
+ 
