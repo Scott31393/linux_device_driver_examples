@@ -89,3 +89,6 @@ After that "hello" strings appear in the Terminal console. To remove the loadabl
 
 "Cleanup module" log appear on the dmesg log.
 
+
+
+## 3) Create a Simple Character Device Driver /dev/scottdevice 
