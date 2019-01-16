@@ -176,6 +176,8 @@ Terminal ask you if you want write to the character device that we have created,
  
 ## 5) Load And Remove Module using Shell Script
 
+file --> 5_load_remove_module_shell <br />
+
 Instead of the use of the following Terminal's commands:
 
 `insmod`<br/>
@@ -218,5 +220,35 @@ To check if these scripts do the right, we can visualize the messages in the ker
 `dmesg` <br />
 
 
-## 6) Learning (POSIX) Semaphore with Example
+## 6) Learning (POSIX) Semaphore by Example
 
+file --> 6_POSIX_semaphore_example <br />
+
+In this pic we can this the use of (Posix) semaphore to archived the mutual exclusion.
+
+![Alt text](./imgs/Sem.png?raw=true "Title")
+
+* 1 -> Semaphore is initialized to 1 (using sem_init() function).
+* 2 -> Process/Thread P_1 see the value of semaphore (set to 1) then can access to resource.
+* 3 -> During the execution of the Process/Thread P_1, semaphore's value is flipped to 0 (using sem_wait() function).
+* 4 -> When the Process/Thread P_1 finished semaphore's value is flipped again to 1 (using sem_post() function). In this way next Process/Thread can access to resources.
+
+we can see more in the specification in the following example:
+
+## Build
+
+
+Open Terminal: <br /> (press `ctrl-t`)<br />
+
+Get the files from the repository:<br />
+
+`gitclone https://github.com/Scott31393/linux_device_driver_examples.git`<br />
+
+`cd /6_POSIX_semaphore_example` <br /> 
+
+`make` <br />
+
+
+Now just execute it using:<br />
+
+`./main` <br />
