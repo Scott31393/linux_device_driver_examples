@@ -1,0 +1,38 @@
+#!/bin/sh
+
+module="main"
+device="scottdevice"
+minor="0"
+
+mode="664"
+
+
+
+
+# invoke insmod with all arguments we were passed
+# and use a pathname, as newer modutils don't look in . by default
+sudo insmod  $module.ko $* || exit 1
+
+
+# remove stale nodes
+sudo rm -f /dev/${device}
+
+#Find the right major number of the device
+major=`awk "\\$2==\"$device\" {print \\$1}" /proc/devices`
+
+#debug
+echo "major='$major'"
+
+#Create the device file /dev/scottdevice
+sudo mknod /dev/${device} c $major $minor
+
+
+# give appropriate group/permissions, and change the group.
+# Not all distributions have staff; some have "wheel" instead.
+group="staff"
+sudo grep '^staff:' /etc/group > /dev/null || group="wheel"
+
+sudo chgrp $group /dev/${device}
+sudo chmod $mode /dev/${device}
+
+#From "Linux Device Driver"

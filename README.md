@@ -19,20 +19,26 @@ In this example we can see how to dynamically get major and minor numbers for 4 
 
 Open Terminal (press `ctrl-t`)<br />
 
-Get the repository:
+Get the repository:<br />
+
 `gitclone https://github.com/Scott31393/linux_device_driver_examples.git`<br />
+
 `cd /1_alloc_major-number` <br /> 
+
 `make` <br />
 
 Dynamically linking the module to the kernel:<br />
+
 `sudo insmod main.ko`<br />
 
 
 Visualize messages contained by the kernel buffer on the stardard output of the OS :<br />
+
 `dmesg`<br />
 
 
 Remove kernel module:<br />
+
 `sudo rmmod main.ko`<br />
 
 ## 2) Create /proc/my_proc Filesystem To Write and Read Data To/From Kernel Space
@@ -57,9 +63,11 @@ From "Linux Device driver", "Linux world blogspot".
 
 Open Terminal: <br /> (press `ctrl-t`)<br />
 
-Get the repository:<br />
+Get the files from the repository:<br />
+
 `gitclone https://github.com/Scott31393/linux_device_driver_examples.git`<br />
-`cd /2_proc_write_read` <br /> 
+
+`cd /2_proc_write_read` <br />
 `make` <br />
 
 Dynamically linking the module to the kernel:<br />
@@ -103,9 +111,12 @@ In this example (play_with_simply_chdvdriver) we create a new character device d
 
 Open Terminal: <br /> (press `ctrl-t`)<br />
 
-Get the repository:<br />
+Get the files from the repository:<br />
+
 `gitclone https://github.com/Scott31393/linux_device_driver_examples.git`<br />
+
 `cd /3_simply_chdvdriver` <br /> 
+
 `make` <br />
 
 Dynamically linking the module to the kernel:<br />
@@ -141,21 +152,71 @@ In this example we create a simple user application that can write or read data 
 
 Open Terminal: <br /> (press `ctrl-t`)<br />
 
-Get the repository:<br />
+Get the files from the repository:<br />
+
 `gitclone https://github.com/Scott31393/linux_device_driver_examples.git`<br />
+
 `cd /4_play_with_simply_chdvdriver` <br /> 
+
 `make` <br />
+
 
 Now just execute it using:<br />
 
 `./play` <br />
 
-Terminal ask you if you want write to the device, pressing:
+Terminal ask you if you want write to the character device that we have created, just press:
 
 `w`
 
- or you want read from the device, pressing:
+ or if you want read from the character device that we have created, just press press:
 
  `r`
 
  
+## 5) Load And Remove Module using Shell Script
+
+Instead of the use of the following Terminal's commands:
+
+`insmod`<br/>
+`chmod`<br/>
+`rmmod`<br/>
+`mknod`<br/>
+`etc..`<br/>
+
+We can simply create a shell script, that does everything with a single command. In particular you can try my shell scripts to load and remove module from the Linux kernel.
+
+
+## Use
+
+Open Terminal: <br /> (press `ctrl-t`)<br />
+
+Get the files from the repository:<br />
+
+`gitclone https://github.com/Scott31393/linux_device_driver_examples.git`<br />
+
+`cd /5_load_remove_module_shell` <br /> 
+
+Then after we build the "module".ko, we can link/remove that to the kernel using these scripts after we have positioned that in the same folder of the module.
+First we make these scipts readable, writable and executable by everyone using chmod 777.<br />
+
+`sudo chmod 777 load_module` <br />
+
+`sudo chmod 777 remove_module` <br />
+
+
+Now to Load the "scottdevice" belonging to the "main".ko module just execute the load script:
+
+`./load_module` <br />
+
+To remove the module just press:
+
+`./remove_module` <br />
+
+To check if these scripts do the right, we can visualize the messages in the kernel buffer in the standard output using:
+
+`dmesg` <br />
+
+
+## 6) Learning (POSIX) Semaphore with Example
+

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+module="main"
+device="scottdevice"
+
+sudo rmmod $module.ko $* || exit 1
+
+sudo rm /dev/$device
